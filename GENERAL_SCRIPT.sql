@@ -47,14 +47,14 @@ CREATE TABLE cliente(
     cli_clave CHAR(20),
     cli_fecha_nto DATE
 );
-INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES();
-INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES();
-INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES();
-INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES();
-INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES();
-INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES();
-INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES();
-INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES();
+INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES("deadofwrite", "Luis", "Lopez", "luis@gmail.com", 3134890132, "12345", "2000-07-07");
+INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES("dreamer", "Pedro", "Andres", "pedrito@hotmail.com", 3218000923,"12345", "1998-08-08");
+INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES("iamwellandgood", "Luis", "Cruz", "luisito@hotmail.com", 3225318966, "12345","2005-09-09");
+INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES("inkandfable", "Jorge", "Diaz", "jorge@gmail.com", 3217000521, "12345","1987-10-10");
+INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES("loversland", "Maria", "Perez", "marii@hotmail.com", 3108079797, "12345","1995-05-09");
+INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES("neon", "Claudia", "Mendez", "Clau@gmail.com", 3102014714, "12345","1990-05-09");
+INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES("rose", "Nelly", "Rodriguez", "nell@gmail.com", 3108072353, "12345","1995-03-03");
+INSERT INTO cliente(cli_username, cli_nombre, cli_apellido, cli_email, cli_celular, cli_clave, cli_fecha_nto) VALUES("true.living", "Ana", "Rojas", "anita@gmail.com", 3149000213, "12345","2004-03-03");
 
 #CUARTO ARCHIVO
 CREATE TABLE revista(
@@ -96,5 +96,26 @@ CREATE TABLE venta(
 	FOREIGN KEY(ven_user_fk) REFERENCES cliente(cli_username),
     FOREIGN KEY(ven_prod_fk) REFERENCES producto(prod_id)
 );
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(1, "deadofwrite", 1, "2017-10-25 20:00:00");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(2, "deadofwrite", 4, "2019-03-15 18:30:00");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(3, "deadofwrite", 9, "2019-05-20 20:30:00");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(4, "dreamer", 6, "2020-03-17 15:30:20");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(5, "dreamer", 7, "2020-04-10 18:30:20");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(6, "iamwellandgood", 8, "2020-02-17 20:30:20");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(7, "iamwellandgood", 9, "2020-02-20 16:30:20");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(8, "iamwellandgood", 11, "2020-03-27 18:30:20");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(9, "inkandfable", 1, "2018-05-20 20:30:00");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(10, "inkandfable", 9, "2020-01-20 20:30:00");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(11, "loversland", 2, "2020-01-10 17:30:20");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(12, "loversland", 5, "2020-03-17 18:30:20");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(13, "rose", 10, "2020-03-20 21:30:20");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(14, "true.living", 2, "2019-05-20 20:30:00");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(15, "true.living", 3, "2018-06-22 21:30:00");
+INSERT INTO venta(ven_id, ven_user_fk, ven_prod_fk, ven_fecha) VALUES(16, "true.living", 6, "2020-03-17 15:30:20");
 
 #SEPTIMO ARCHIVO
+UPDATE libro SET lib_anio=2012 WHERE lib_id_fk = 1;
+UPDATE cliente SET cli_celular = 3115678432 WHERE cli_username LIKE "%iamwellandgood%";
+DELETE venta.* FROM venta WHERE ven_user_fk LIKE "%loversland%" AND ven_prod_fk = 4;
+
+#OCTAVO ARCHIVO
